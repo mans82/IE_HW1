@@ -1,0 +1,64 @@
+$font-face: sans-serif;
+
+$color-gray: grey;
+$color-yellow: #FFB400;
+$color-bluegray: #F0F0F6;
+
+body {
+    font-family: $font-face;
+    background-color: $color-bluegray;
+    margin: 0px;
+}
+
+#intro {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white
+}
+
+#intro-text {
+    max-width: 30em;
+    margin: auto;
+}
+
+#intro-title {
+    font-size: 2em;
+    line-height: 1.2em;
+    font-weight: bold;
+
+    span {
+        color: $color-yellow;
+    }
+}
+
+#intro-paragraph {
+    color: $color-gray;
+    line-height: 1.5em;
+}
+
+#my-image-big {
+    width: 325px;
+    margin: auto;
+}
+
+.button {
+    padding: 16px 32px;
+    background-color: $color-yellow;
+    display: inline;
+    font-size: 16px;
+    border-radius: 5px;
+
+    * {
+        vertical-align: middle;
+    }
+}
+
+#hire-me-button {
+    margin: 28px auto;
+    float: left;
+}
+
+.small-icon {
+    margin: 2px;
+    width: 1em;
+}
