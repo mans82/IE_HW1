@@ -13,7 +13,15 @@ body {
 #intro {
     display: flex;
     flex-flow: row wrap;
-    background-color: white
+    background-color: white;
+
+    h1 {
+        font-size: 48px;
+
+        span {
+            color: $color-yellow;
+        }
+    }
 }
 
 #intro-text {
@@ -21,19 +29,9 @@ body {
     margin: auto;
 }
 
-#intro-title {
-    font-size: 2em;
-    line-height: 1.2em;
-    font-weight: bold;
-
-    span {
-        color: $color-yellow;
-    }
-}
-
-#intro-paragraph {
-    color: $color-gray;
-    line-height: 1.5em;
+#intro-description {
+    max-width: 424px;
+    margin: auto 0px;
 }
 
 #my-image-big {
@@ -61,4 +59,77 @@ body {
 .small-icon {
     margin: 2px;
     width: 1em;
+}
+
+.section {
+
+    padding: 50px 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .section-header {
+
+        * {
+            vertical-align: middle;
+        }
+    }
+
+    .section-content {
+        margin: 25px auto;
+        float: left;
+    }
+}
+
+.section-description {
+    color: $color-gray;
+    line-height: 1.5em;
+    max-width: 438px;
+    margin: 25px auto;
+}
+
+#services-cards {
+    display: flex;
+    flex-direction: row wrap;
+}
+
+.card {
+    background-color: white;
+    vertical-align: middle;
+    width: 310px;
+    height: 225px;
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-content {
+        margin: 42px auto;
+
+        .card-image {
+            width: 68px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin: 15px 0px;
+            font-weight: 500;
+        }
+
+        .card-description {
+            font-size: 15px;
+            color: $color-gray;
+            margin: 0px;
+            line-height: 24px;
+            max-width: 260px;
+            margin: 15px 0px;
+        }
+
+        a {
+            color: $color-yellow;
+            text-decoration: none;
+        }
+    }
 }
