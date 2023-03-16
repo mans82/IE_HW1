@@ -10,6 +10,25 @@ body {
     margin: 0px;
 }
 
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.description {
+    color: $color-gray;
+    line-height: 1.5em;
+}
+
+.highlighted {
+    background-color: $color-yellow;
+    color: white;
+}
+
+.small {
+    font-size: 10px;
+}
+
 #intro {
     display: flex;
     flex-flow: row wrap;
@@ -62,8 +81,6 @@ body {
 }
 
 .section {
-
-    padding: 50px 20px;
     text-align: center;
 
     h2 {
@@ -72,13 +89,15 @@ body {
 
     .section-header {
 
+        padding: 50px 20px;
+
         * {
             vertical-align: middle;
         }
     }
 
     .section-content {
-        margin: 25px auto;
+        margin: 25px 20px;
         float: left;
     }
 }
@@ -119,8 +138,6 @@ body {
         }
 
         .card-description {
-            font-size: 15px;
-            color: $color-gray;
             margin: 0px;
             line-height: 24px;
             max-width: 260px;
@@ -130,6 +147,63 @@ body {
         a {
             color: $color-yellow;
             text-decoration: none;
+        }
+    }
+}
+
+#education {
+    .section-content {
+        background-color: white;
+    }
+
+    hr {
+        height: 1.5px;
+        width: calc(100% - 60px);
+        border-width: 0;
+        background-color: $color-bluegray;
+    }
+}
+
+.list {
+    padding: 37px;
+
+    .list-item {
+        background-color: white;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0px;
+
+        .description {
+            margin-bottom: 0px;
+        }
+
+        .highlighted {
+            display: inline;
+            padding: 5px;
+        }
+
+        .list-role {
+            display: inline;
+            margin-right: 21px;
+        }
+
+        .list-left-section {
+            display: inline-block;
+            flex-basis: 300px;
+            flex-grow: 0;
+            flex-shrink: 1;
+            text-align: left;
+        }
+
+
+        .list-right-section {
+            display: inline-block;
+            text-align: left;
+            flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            // min-width: 400px;
+            // width: fit-content;
         }
     }
 }
