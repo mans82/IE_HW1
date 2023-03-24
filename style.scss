@@ -20,10 +20,17 @@ body {
     flex-basis: 600px;
 }
 
+hr {
+    height: 1.5px;
+    border-width: 0;
+    background-color: $color-bluegray;
+}
+
 #sidebar {
-    flex-basis: 305px;
+    flex-basis: 220px;
     flex-grow: 1;
     flex-shrink: 0;
+    padding: 0px 40px;
 
     background-color: white;
 
@@ -32,7 +39,12 @@ body {
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    hr {
+        margin: 0;
     }
 
     #profile-photo-area {
@@ -81,12 +93,45 @@ body {
             height: 24px;
             // padding: 6px;
             border-radius: 1000px;
-            margin: auto 7.5px;
+            margin: auto 6px;
 
             * {
                 flex-grow: 0;
                 flex-shrink: 0;
             }
+        }
+    }
+
+    #basic-info {
+        display: block;
+
+        .row {
+            overflow: auto;
+
+            margin: 5px auto;
+
+            p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding: 5px;
+            }
+        }
+
+        .highlighted {
+            color: black;
+            padding: 5px;
+        }
+
+        .key {
+            float: left;
+        }
+
+        .value {
+            float: right;
+        }
+
+        #freelance-value {
+            color: $color-lightgreen;
         }
     }
 
@@ -239,10 +284,7 @@ body {
     }
 
     hr {
-        height: 1.5px;
         width: calc(100% - 60px);
-        border-width: 0;
-        background-color: $color-bluegray;
     }
 }
 
