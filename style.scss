@@ -32,6 +32,8 @@ hr {
     flex-shrink: 0;
     padding: 0px 40px;
 
+    height: fit-content;
+
     background-color: white;
 
     .sidebar-section {
@@ -155,6 +157,23 @@ hr {
 
         img {
             margin-right: 15px;
+        }
+    }
+
+    #download-cv {
+        .button {
+            border-radius: 0;
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            img {
+                margin-left: 20px;
+            }
         }
     }
 
