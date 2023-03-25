@@ -20,7 +20,7 @@ Compile the SCSS styles to CSS.
 sass style.scss style.css
 ```
 
-Now you can open `index.html` file directly in you favourite browser to see the website. Another option is to run a web server to serve the files. If you have Python installed, one option is to use  `http.server` module provided by the Python standard library:
+Now you can open `index.html` file directly in your favourite browser to see the website. Another option is to run a web server to serve the files. If you have Python installed, one option is to use  `http.server` module provided by the Python standard library:
 
 ```sh
 python -m http.server --bind localhost 8080
