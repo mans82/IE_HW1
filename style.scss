@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+
 body {
     font-family: $font-face;
     background-color: $color-bluegray;
@@ -9,16 +10,218 @@ body {
     flex-flow: row-reverse wrap;
 }
 
-#main-content {
-    flex-grow: 10000;
-    width: fit-content;
-    flex-basis: 600px;
-}
 
 hr {
     height: 1.5px;
     border-width: 0;
     background-color: $color-bluegray;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.description {
+    color: $color-gray;
+    line-height: 1.5em;
+}
+
+.highlighted {
+    background-color: $color-yellow;
+    color: white;
+}
+
+.small {
+    font-size: 10px;
+}
+
+.button {
+    padding: 16px 32px;
+    background-color: $color-yellow;
+    display: inline;
+    font-size: 16px;
+    border-radius: 5px;
+
+    * {
+        vertical-align: middle;
+    }
+}
+
+.small-icon {
+    margin: 2px;
+    width: 1em;
+}
+
+#main-content {
+
+    flex-grow: 10000;
+    width: fit-content;
+    flex-basis: 600px;
+
+    #intro {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: white;
+
+        padding: 20px;
+        padding-bottom: 0;
+
+        #intro-text {
+            max-width: 30em;
+            margin: auto;
+
+            h1 {
+                font-size: 48px;
+
+                span {
+                    color: $color-yellow;
+                }
+            }
+
+            #intro-description {
+                max-width: 424px;
+                margin: auto 0px;
+            }
+
+            #hire-me-button {
+                margin: 28px auto;
+                float: left;
+            }
+        }
+
+        #my-image-big {
+            width: 325px;
+            margin: auto;
+        }
+    }
+
+
+
+
+    .section {
+        text-align: center;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        .section-header {
+
+            margin: 50px 20px;
+
+            * {
+                vertical-align: middle;
+            }
+        }
+
+        .section-content {
+            margin: 25px 20px;
+        }
+
+        .section-description {
+            color: $color-gray;
+            line-height: 1.5em;
+            max-width: 438px;
+            margin: 25px auto;
+        }
+    }
+
+
+
+    #service-cards {
+        .card {
+            background-color: white;
+            vertical-align: middle;
+            width: 310px;
+            height: 225px;
+            margin: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            .card-content {
+                margin: 42px auto;
+
+                .card-image {
+                    width: 68px;
+                }
+
+                .card-title {
+                    font-size: 18px;
+                    margin: 15px 0px;
+                    font-weight: 500;
+                }
+
+                .card-description {
+                    margin: 0px;
+                    line-height: 24px;
+                    max-width: 260px;
+                    margin: 15px 0px;
+                }
+
+                a {
+                    color: $color-yellow;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+
+    #education,
+    #work-history {
+        .section-content {
+            background-color: white;
+        }
+
+        hr {
+            width: calc(100% - 60px);
+        }
+
+        .list {
+            padding: 37px;
+
+            .list-item {
+                background-color: white;
+                display: flex;
+                flex-flow: row wrap;
+                padding: 0px;
+
+                .description {
+                    margin-bottom: 0px;
+                }
+
+                .highlighted {
+                    display: inline;
+                    padding: 5px;
+                }
+
+                .list-role {
+                    display: inline;
+                    margin-right: 21px;
+                }
+
+                .list-left-section {
+                    width: fit-content;
+                    flex-basis: 300px;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    text-align: left;
+                }
+
+
+                .list-right-section {
+                    width: fit-content;
+                    text-align: left;
+                    flex-basis: 300px;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
+            }
+        }
+    }
 }
 
 #sidebar {
@@ -172,202 +375,4 @@ hr {
         }
     }
 
-}
-
-.title {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.description {
-    color: $color-gray;
-    line-height: 1.5em;
-}
-
-.highlighted {
-    background-color: $color-yellow;
-    color: white;
-}
-
-.small {
-    font-size: 10px;
-}
-
-#intro {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: white;
-
-    padding: 20px;
-    padding-bottom: 0;
-
-    h1 {
-        font-size: 48px;
-
-        span {
-            color: $color-yellow;
-        }
-    }
-}
-
-#intro-text {
-    max-width: 30em;
-    margin: auto;
-}
-
-#intro-description {
-    max-width: 424px;
-    margin: auto 0px;
-}
-
-#my-image-big {
-    width: 325px;
-    margin: auto;
-}
-
-.button {
-    padding: 16px 32px;
-    background-color: $color-yellow;
-    display: inline;
-    font-size: 16px;
-    border-radius: 5px;
-
-    * {
-        vertical-align: middle;
-    }
-}
-
-#hire-me-button {
-    margin: 28px auto;
-    float: left;
-}
-
-.small-icon {
-    margin: 2px;
-    width: 1em;
-}
-
-.section {
-    text-align: center;
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .section-header {
-
-        margin: 50px 20px;
-
-        * {
-            vertical-align: middle;
-        }
-    }
-
-    .section-content {
-        margin: 25px 20px;
-    }
-}
-
-.section-description {
-    color: $color-gray;
-    line-height: 1.5em;
-    max-width: 438px;
-    margin: 25px auto;
-}
-
-#services-cards {
-    display: flex;
-    flex-direction: row wrap;
-}
-
-.card {
-    background-color: white;
-    vertical-align: middle;
-    width: 310px;
-    height: 225px;
-    margin: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    .card-content {
-        margin: 42px auto;
-
-        .card-image {
-            width: 68px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            margin: 15px 0px;
-            font-weight: 500;
-        }
-
-        .card-description {
-            margin: 0px;
-            line-height: 24px;
-            max-width: 260px;
-            margin: 15px 0px;
-        }
-
-        a {
-            color: $color-yellow;
-            text-decoration: none;
-        }
-    }
-}
-
-#education,
-#work-history {
-    .section-content {
-        background-color: white;
-    }
-
-    hr {
-        width: calc(100% - 60px);
-    }
-}
-
-.list {
-    padding: 37px;
-
-    .list-item {
-        background-color: white;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 0px;
-
-        .description {
-            margin-bottom: 0px;
-        }
-
-        .highlighted {
-            display: inline;
-            padding: 5px;
-        }
-
-        .list-role {
-            display: inline;
-            margin-right: 21px;
-        }
-
-        .list-left-section {
-            width: fit-content;
-            flex-basis: 300px;
-            flex-grow: 0;
-            flex-shrink: 1;
-            text-align: left;
-        }
-
-
-        .list-right-section {
-            width: fit-content;
-            text-align: left;
-            flex-basis: 300px;
-            flex-grow: 1;
-            flex-shrink: 1;
-            // min-width: 400px;
-            // width: fit-content;
-        }
-    }
 }
